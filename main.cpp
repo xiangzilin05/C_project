@@ -3,8 +3,11 @@
 
 int main() {
 //    std::cout << "Hello, World!" << std::endl;
-    Stock kate, joy;
-    kate.show();
-    joy.show();
+    Stock fluffy_the_cat;
+    fluffy_the_cat.acquire("NanoSmart", 20, 12.50);
+    fluffy_the_cat.show();
+    fluffy_the_cat.buy(15, 18.125);
+    fluffy_the_cat.show();
+
     return 0;
 }
