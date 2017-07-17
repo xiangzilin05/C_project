@@ -27,6 +27,7 @@ public:
     void sell(long num, double price);
     void update(double price);
     double total() const { return total_val; }
+    const Stock & topval(const Stock & s) const;
     void show() const;
 };
 #endif //C_PROJECT_STOCK00_H
