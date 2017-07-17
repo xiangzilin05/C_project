@@ -3,5 +3,5 @@ project(C___project)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES main.cpp 10/stock00.h 10/stock00.cpp)
+set(SOURCE_FILES main.cpp 10/stock00.h 10/stock00.cpp 10/exercise/1/BankAccount.h 10/exercise/1/BankAccount.cpp 10/exercise/2/person.h)
 add_executable(C___project ${SOURCE_FILES})
