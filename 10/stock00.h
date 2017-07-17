@@ -6,21 +6,27 @@
 #define C_PROJECT_STOCK00_H
 
 #include <string>
+using namespace std;
 
 class Stock
 {
 private:
-    std::string company;
+    string company;
     long shares;
     double share_val;
     double total_val;
     void set_tot(){ total_val = shares * share_val; }
 
 public:
-    void acquire(const std::string & co, long n, double pr);
+    Stock();
+//    Stock(const string & co = "Error", long n = 0, double pr = 0.0);
+    Stock(const string & co, long n = 0, double pr = 0.0);
+    ~Stock();
+//    void acquire(const std::string & co, long n, double pr);
     void buy(long num, double price);
     void sell(long num, double price);
     void update(double price);
-    void show();
+    double total() const { return total_val; }
+    void show() const;
 };
 #endif //C_PROJECT_STOCK00_H
