@@ -68,7 +68,12 @@ void Time::show() const {
     std::cout << hours << " hours, " << minutes << " minutes";
 }
 
-
+Time operator*(double m, const Time &t) {
+//    Time result;
+//    result = t * m;
+//    return result;
+    return t * m;
+}
 
 
 

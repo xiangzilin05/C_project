@@ -20,6 +20,8 @@ public:
     Time operator-(const Time & t) const;
     Time operator*(double n) const;
     void show() const ;
+
+    friend Time operator*(double m, const Time & t);
 };
 
 #endif //C_PROJECT_MYTIME0_H

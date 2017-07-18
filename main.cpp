@@ -42,5 +42,9 @@ int main() {
     total.show();
     cout << endl;
 
+    total = 2 * coding;
+    cout << "2 * coding = ";
+    total.show();
+    cout << endl;
     return 0;
 }
