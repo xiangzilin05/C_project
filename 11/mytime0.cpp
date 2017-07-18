@@ -68,11 +68,15 @@ void Time::show() const {
     std::cout << hours << " hours, " << minutes << " minutes";
 }
 
-Time operator*(double m, const Time &t) {
+inline Time operator*(double m, const Time &t) {
 //    Time result;
 //    result = t * m;
 //    return result;
     return t * m;
+}
+
+ostream & operator<<(ostream &os, const Time &t) {
+    return os << t.hours << " hours, " << t.minutes << " minutes";
 }
 
 

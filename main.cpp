@@ -3,48 +3,15 @@
 #include "10/exercise/1/BankAccount.h"
 #include "10/exercise/2/person.h"
 #include "11/mytime0.h"
+#include "11/vector.h"
+
+using namespace VECTOR;
 
 int main() {
-    Time planning;
-    Time coding(2, 40);
-    Time fixing(5, 55);
-    Time total;
-
-    cout << "planning time = ";
-    planning.show();
+    Vector folly(3.0, 4.0);
+    cout << folly;
     cout << endl;
-
-    cout << "coding time = ";
-    coding.show();
-    cout << endl;
-
-    cout << "fixing time = ";
-    fixing.show();
-    cout << endl;
-
-    total = coding.sum(fixing);
-    cout << "coding.sum(fixing) = ";
-    total.show();
-    cout << endl;
-
-    total = coding + fixing;
-    cout << "coding + fixing = ";
-    total.show();
-    cout << endl;
-
-    total = fixing - coding;
-    cout << "fixing - coding = ";
-    total.show();
-    cout << endl;
-
-    total = coding * 2;
-    cout << "coding * 2 = ";
-    total.show();
-    cout << endl;
-
-    total = 2 * coding;
-    cout << "2 * coding = ";
-    total.show();
-    cout << endl;
+    Vector foolery(20.0, 30.0, Vector::Mode::POL);
+    cout << foolery;
     return 0;
 }
