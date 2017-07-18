@@ -32,5 +32,15 @@ int main() {
     total.show();
     cout << endl;
 
+    total = fixing - coding;
+    cout << "fixing - coding = ";
+    total.show();
+    cout << endl;
+
+    total = coding * 2;
+    cout << "coding * 2 = ";
+    total.show();
+    cout << endl;
+
     return 0;
 }
