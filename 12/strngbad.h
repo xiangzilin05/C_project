@@ -11,7 +11,7 @@ class StringBad{
 private:
     char * str;
     int len;
-    static int num_strings;
+    static int num_strings = 0;
 public:
     StringBad(const char * s);
     StringBad();
