@@ -6,6 +6,12 @@
 #include "strngbad.h"
 using namespace std;
 
+int StringBad::num_strings = 0;
+
+StringBad::StringBad(const StringBad &st) {
+    num_strings++;
+    len = st.len;
+}
 StringBad::StringBad(const char *s) {
     len = strlen(s);
     str = new char[len + 1];
