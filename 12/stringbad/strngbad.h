@@ -21,6 +21,8 @@ public:
 
     ~StringBad();
 
+    StringBad &operator=(const StringBad &st);
+
     friend std::ostream &operator<<(std::ostream &os, const StringBad &st);
 };
 

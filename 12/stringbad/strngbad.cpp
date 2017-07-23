@@ -4,6 +4,7 @@
 
 #include <cstring>
 #include "strngbad.h"
+
 using namespace std;
 
 int StringBad::num_strings = 0;
@@ -11,7 +12,12 @@ int StringBad::num_strings = 0;
 StringBad::StringBad(const StringBad &st) {
     num_strings++;
     len = st.len;
+    str = new char[len + 1];
+    strcpy(str, st.str);
+    cout << num_strings << ": \"" << str
+         << "\" object created\n";
 }
+
 StringBad::StringBad(const char *s) {
     len = strlen(s);
     str = new char[len + 1];
@@ -35,7 +41,17 @@ StringBad::~StringBad() {
     delete[]str;
 }
 
-ostream & operator<<(ostream & os, const StringBad & st){
+StringBad &StringBad::operator=(const StringBad &st) {
+    if (this == &st)
+        return *this;
+    delete[] str;
+    len = st.len;
+    str = new char[len + 1];
+    strcpy(str, st.str);
+    return *this;
+}
+
+ostream &operator<<(ostream &os, const StringBad &st) {
     os << st.str;
     return os;
 }
